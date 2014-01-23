@@ -10,7 +10,8 @@ matrix_1 = [["a", "b", "c", "d"],
 def rotate_matrix(matrix):
     n = len(matrix)
     for i in range(n//2):
-        temp = matrix[i]
+        temp = list(matrix[i])
+        for j in range()
 
 
 

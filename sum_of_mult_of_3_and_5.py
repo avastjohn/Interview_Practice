@@ -7,10 +7,7 @@ def get_sum(x):
     x-=1
     return (((x//3)*(3+x-(x%3)))+((x//5)*(5+x-(x%5)))-((x//15)*(15+x-(x%15))))/2
 
-x1 = 1000
-x2 = 100
-x3 = 10
-x4 = 21
 
-print get_sum(x1)
-print get_sum(x4)
+
+x = 1000
+print get_sum(x)
