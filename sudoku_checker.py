@@ -9,10 +9,13 @@ solved = [[2,4,8,3,9,5,7,1,6],
           [8,6,3,4,1,7,2,9,5],
           [1,9,5,2,8,6,4,3,7],
           [4,2,7,9,5,3,8,6,1],]
+x = 0
 
 def check_array_of_9(array):
+    global x
     d = {}
     for item in array:
+        x += 1
         if item in d:
             return False
         else:
@@ -53,5 +56,49 @@ def check_validity(solution):
 
 
 print check_validity(solved)
+print x
+#######################################################
+## John's solution
 
+y = 0
+
+def john_checks_validity(matrix):
+    global y
+    ## check rows
+    for i in range(9):
+        used=set([])
+        for j in range(9):
+            y+=1
+            v=matrix[i][j]
+            if v in used:
+                return False
+            used.add(v)
+
+    ## check cols
+    for j in range(9):
+        used=set([])
+        for i in range(9):
+            y+=1
+            v=matrix[i][j]
+            if v in used:
+                return False
+            used.add(v)
+
+    ## check boxes
+    for i in range(9):
+        used=set([])
+        r_add=(i%3)*3
+        c_add=i//3
+        
+        for i in range(9):
+            y+=1
+            v=matrix[i][j]
+            if v in used:
+                return False
+            used.add(v)
+
+
+
+print john_checks_validity(solved)
+print 
 
