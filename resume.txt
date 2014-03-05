@@ -1,0 +1,68 @@
+Ava St. John
+Software Engineer
+San Francisco, CA           
+(503) 312-3082
+avasaintjohn@gmail.com
+github.com/avastjohn
+
+
+SUMMARY
+
+I am a full-stack software engineer currently looking for a developer position. My strongest languages right now are Python and Javascript, and I am working on learning Obj-C for a fun challenge. I am curious, smart, and enthusiastic. I can't wait to find the perfect team of people who work hard, love to learn, and live to code. 
+
+
+TECHNICAL EXPERIENCE
+
+Teacher Aide, Girl Develop It
+3/2014 - Present
+•Help students troubleshoot and develop a deeper understanding of programming concepts in Javascript
+
+Developer, Hackbright Academy
+9/2013 – 12/2013
+•Was one of 27 selected from a pool of over 400 applicants to elite software fellowship
+•Built a web game to introduce programming concepts to young girls, using Javascript/jQuery, HTML5 Canvas, Python, Flask, SQLAlchemy, and PostgreSQL
+
+Hacker, DevelopHer Hackathon
+11/2013
+•Mentored a new programmer through the process of creating a children’s game in Python
+
+Hacker, Silicon Chef Hardware Hackathon
+10/2013
+•Learned basics of hardware
+•Wrote arduino programs utilizing potentiometer, LEDs, wind sensor, and light sensor
+
+Student, Intro to Interactive Programming in Python 
+06/2013, Coursera
+•Learned basic programming concepts and basic debugging, and completed weekly mini-projects
+
+
+OTHER EXPERIENCE
+
+Admin Assistant, Chem & Biochem Dept, UCSC
+10/2011 – 6/2013
+•Hired and mentored student workers, provided administrative course support, maintained website, implemented automated systems
+
+Math Instruction Specialist/Private Tutor
+10/2009 – 3/2013
+•Developed, implemented, and regularly adjusted individualized math programs
+            
+EDUCATION
+
+Hackbright Academy, 2013
+Software Engineering Fellowship
+
+University of Oregon, 2009
+MS Education, 
+Teaching Certificate
+
+University of Oregon, 2008
+BS Developmental Psychology & Mathematics
+
+
+SKILLS
+
+Python, JavaScript/jQuery, HTML/CSS, SQL, Git
+
+Experience with Flask, SQLAlchemy, jQuery-UI
+
+Excellent verbal and written communication skills
