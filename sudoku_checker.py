@@ -9,96 +9,63 @@ solved = [[2,4,8,3,9,5,7,1,6],
           [8,6,3,4,1,7,2,9,5],
           [1,9,5,2,8,6,4,3,7],
           [4,2,7,9,5,3,8,6,1],]
-x = 0
 
-def check_array_of_9(array):
-    global x
+false_solved = [[2,4,8,3,9,5,7,1,6],
+                [5,7,1,6,2,8,3,4,9],
+                [9,3,6,7,4,1,5,8,2],
+                [6,8,2,5,3,9,1,7,4],
+                [3,5,9,1,7,4,6,2,8],
+                [7,1,4,8,6,2,9,5,3],
+                [8,6,3,4,1,7,2,9,5],
+                [1,9,5,2,8,6,4,3,7],
+                [4,2,7,9,5,3,8,1,6]]
+
+false_solved2 = [[1,2,3,4,5,6,7,8,9],
+                 [2,3,4,5,6,7,8,9,1],
+                 [3,4,5,6,7,8,9,1,2],
+                 [4,5,6,7,8,9,1,2,3],
+                 [5,6,7,8,9,1,2,3,4],
+                 [6,7,8,9,1,2,3,4,5],
+                 [7,8,9,1,2,3,4,5,6],
+                 [8,9,1,2,3,4,5,6,7],
+                 [9,1,2,3,4,5,6,7,8]]
+def check_nine(nine_list):
     d = {}
-    for item in array:
-        x += 1
-        if item in d:
+    for num in nine_list:
+        if d.get(num):
             return False
         else:
-            d[item] = True
+            d[num] = True
     return True
 
-def check_validity(solution):
+def sudoku_checker(matrix):
     for i in range(9):
-        column = []
-        box1 = []
-        box2 = []
-        box3 = []
-        print "row", i, solution[i]
-        if not check_array_of_9(solution[i]):
+        #check rows
+        if not check_nine(matrix[i]):
             return False
+        #check collumns
+        col = []
         for j in range(9):
-            column.append(solution[j][i])
-            if i%3 == 0:
-                if j < 3:
-                    box1 += solution[j][i:i+3]
+            col.append(matrix[j][i])
+        if not check_nine(col):
+            return False
+        #check boxes
+        if i % 3 == 0:
+            box1 = []
+            box2 = []
+            box3 = []
+            for j in range(9):
+                if j<3:
+                    box1 += (matrix[j][i:i+3])
                 elif j < 6:
-                    box2 += solution[j][i:i+3]
+                    box2 += (matrix[j][i:i+3])
                 else:
-                    box3 += solution[j][i:i+3]
-        print "column", i, column
-        if i%3 == 0:
-            print "box1", i, box1
-            print "box2", i, box2
-            print "box3", i, box3
-            valid1 = check_array_of_9(box1)
-            valid2 = check_array_of_9(box2)
-            valid3 = check_array_of_9(box3)
-        valid4 = check_array_of_9(column)
-        if not (valid1 and valid2 and valid3 and valid4):
-            return False
+                    box3 += (matrix[j][i:i+3])
+            if not (check_nine(box1) and check_nine(box2) and check_nine(box3)):
+                return False
     return True
 
 
-
-print check_validity(solved)
-print x
-#######################################################
-## John's solution
-
-y = 0
-
-def john_checks_validity(matrix):
-    global y
-    ## check rows
-    for i in range(9):
-        used=set([])
-        for j in range(9):
-            y+=1
-            v=matrix[i][j]
-            if v in used:
-                return False
-            used.add(v)
-
-    ## check cols
-    for j in range(9):
-        used=set([])
-        for i in range(9):
-            y+=1
-            v=matrix[i][j]
-            if v in used:
-                return False
-            used.add(v)
-
-    ## check boxes
-    for i in range(9):
-        used=set([])
-        r_add=(i%3)*3
-        c_add=i//3
-        
-        for i in range(9):
-            y+=1
-            v=matrix[i][j]
-            if v in used:
-                return False
-            used.add(v)
-
-
-
-print john_checks_validity(solved)
-print 
-
+print sudoku_checker(solved)
+print sudoku_checker(false_solved)
+print sudoku_checker(false_solved2)
